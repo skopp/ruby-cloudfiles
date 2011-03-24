@@ -97,6 +97,9 @@ module CloudFiles
       response.body
     end
 
+    # Alias to #data so that dm-paperclip#reprocess! works
+    alias_method :read, :data
+
     # Retrieves the data from an object and returns a stream that must be passed to a block.  Throws a
     # NoSuchObjectException if the object doesn't exist.
     #
